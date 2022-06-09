@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="16" time="207.696">
+<testcase classname="guest user should be able to register on the system" name="guest user registers with valid data successfully" time="20.572">
+<system-out><![CDATA[When user clicks on Register tab............................................passed
+And user fills “Your Personal Details” fields...............................passed
+And user fills “Company Details” field......................................passed
+And user fills Fill “Your Password” fields..................................passed
+And user Clicks on REGISTER button..........................................passed
+Then user could register with valid data successfully.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to login to the System" name="guest user could Login with valid credentials" time="16.491">
+<system-out><![CDATA[When user clicks on Log in tab..............................................passed
+And user enters "test@example.com" and "P@ssw0rd"...........................passed
+And user clicks on LOG IN button............................................passed
+Then user could login successfully..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to switch between currencies [$, €] in home page" name="guest user could select Euro currency" time="8.784">
+<system-out><![CDATA[When user selects “Euro” from currency dropdown list........................passed
+Then Euro currency is displayed.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to search for products with different parameters" name="user could search for products using product name" time="11.677">
+<system-out><![CDATA[When user enters product name "apple".......................................passed
+And user clicks on search field in home page................................passed
+Then relative Apple products are displayed..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to search for products with different parameters" name="user could search for products using product SKU" time="11.905">
+<system-out><![CDATA[When user enters product SKU "AP_MBP_13"....................................passed
+And user clicks on search field.............................................passed
+Then relative product is displayed..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to hover categories and select sub category" name="user could hover categories and select sub category" time="11.057">
+<system-out><![CDATA[When user covers category and select subcategory............................passed
+Then user clicks on subcategory.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to open sliders in home page" name="first slider is clickable on home page" time="11.269">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on the first slider........................................passed
+Then relative product for the first slider is displayed.....................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinitions.D06_homeSlidersStepDef.firstSlider_IsDisplayed(D06_homeSlidersStepDef.java:21)
+	at ✽.relative product for the first slider is displayed(file:///C:/Users/ElAnoud/IdeaProjects/demonopcommerceautomation/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="guest user should be able to open sliders in home page" name="second slider is clickable on home page" time="15.53">
+<failure message="element not interactable&#10;  (Session info: chrome=102.0.5005.63)&#10;Build info: version: '4.2.1', revision: 'ac4d0fdd4a'&#10;System info: host: 'DESKTOP-V6IU77M', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [025df0a8ff03470869a332cd6d349824, clickElement {id=460cdf17-89ae-4f63-abf9-2f2b67fa6543}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\ElAnoud\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:59119}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59119/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (025df0a8ff03470869a332cd6d349824)] -&gt; xpath: (//a[@href=&quot;http://demo.nopcommerce.com/&quot;])[2]]&#10;Session ID: 025df0a8ff03470869a332cd6d349824" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[When user clicks on the second slider.......................................failed
+Then relative product for the second slider is displayed....................skipped
+
+StackTrace:
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=102.0.5005.63)
+Build info: version: '4.2.1', revision: 'ac4d0fdd4a'
+System info: host: 'DESKTOP-V6IU77M', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [025df0a8ff03470869a332cd6d349824, clickElement {id=460cdf17-89ae-4f63-abf9-2f2b67fa6543}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\ElAnoud\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:59119}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59119/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (025df0a8ff03470869a332cd6d349824)] -> xpath: (//a[@href="http://demo.nopcommerce.com/"])[2]]
+Session ID: 025df0a8ff03470869a332cd6d349824
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at stepDefinitions.D06_homeSlidersStepDef.second_Slider(D06_homeSlidersStepDef.java:27)
+	at ✽.user clicks on the second slider(file:///C:/Users/ElAnoud/IdeaProjects/demonopcommerceautomation/src/main/resources/features/F06_homeSliders.feature:9)
+]]></failure>
+</testcase>
+<testcase classname="guest users could open followUs links" name="user opens facebook link" time="13.326">
+<system-out><![CDATA[When user clicks on facebook link...........................................passed
+Then facebook is opened successfully in new tab.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest users could open followUs links" name="user opens twitter link" time="18.042">
+<system-out><![CDATA[When user clicks on twitter link............................................passed
+Then twitter is opened successfully in new tab..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest users could open followUs links" name="user opens rss link" time="11.116">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user clicks on rss link................................................passed
+Then rss is opened successfully in new tab..................................failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at stepDefinitions.D07_followUsStepDef.rss_opened_newTab(D07_followUsStepDef.java:65)
+	at ✽.rss is opened successfully in new tab(file:///C:/Users/ElAnoud/IdeaProjects/demonopcommerceautomation/src/main/resources/features/F07_followUs.feature:14)
+]]></failure>
+</testcase>
+<testcase classname="guest users could open followUs links" name="user opens youtube link" time="13.97">
+<system-out><![CDATA[When user clicks on youtube link............................................passed
+Then youtube is opened successfully in new tab..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to add products to the wishlist" name="success message is visible when user adds product to the wishlist" time="10.713">
+<system-out><![CDATA[When user adds product to the wishlist......................................passed
+Then wishlist success message is displayed..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to add products to the wishlist" name="number of wishlist items in home page is increased" time="10.84">
+<system-out><![CDATA[When user adds product to the wishlist......................................passed
+Then wishlist success message is displayed..................................passed
+And user gets the number of wishlist items after adding product.............passed
+Then number of wishlist items is increased..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to add products to shopping cart" name="success message is visible when user adds product to shopping cart" time="10.528">
+<system-out><![CDATA[When user adds product to the shopping cart.................................passed
+Then shopping cart success message is displayed.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="guest user should be able to add products to shopping cart" name="number of products in shopping cart is increased" time="10.973">
+<system-out><![CDATA[When user adds product to the shopping cart.................................passed
+Then shopping cart success message is displayed.............................passed
+And user gets the number of shopping cart items after adding product........passed
+Then number of shopping cart products is increased..........................passed
+]]></system-out>
+</testcase>
+</testsuite>
